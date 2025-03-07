@@ -1,4 +1,8 @@
+TOPNAME = MUX
+NXDC_FILE = constr/$(TOPNAME).nxdc
 BUILD_DIR = ./build
+OBJ_DIR = $(BUILD_DIR)/obj_dir
+VEVERILATOR_FLAGS = --binary -j 0 -Wall -I$(VSRC_DIR) --Mdir ${BUILD_DIR}
 
 PRJ = playground
 
@@ -33,5 +37,6 @@ clean:
 sim:
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!
 	@echo "Write this Makefile by yourself."
+	verilator -I build -Wall -cc GCD.sv --exe sim_main.cpp
 
 -include ../Makefile

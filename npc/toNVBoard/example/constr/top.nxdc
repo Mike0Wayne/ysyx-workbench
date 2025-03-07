@@ -1,0 +1,11 @@
+top=MUX
+
+io_in1 (SW3, SW2)
+io_in2 (SW5, SW4)
+io_in3 (SW7, SW6)
+io_in4 (SW9, SW8)
+
+io_sel0 SW0
+io_sel1 SW1
+
+io_out (LD1, LD0)
